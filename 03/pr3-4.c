@@ -10,10 +10,10 @@ int main(void){
 
     if(n==m){
         puts("AとBは等しいです。");
-        }else if(n>m){
-            puts("AはBより大きいです。");
-            }else{
-            puts("AはBより小さいです。");
+    }else if(n>m){
+        puts("AはBより大きいです。");
+    }else{
+        puts("AはBより小さいです。");
     }
 
     return 0;
