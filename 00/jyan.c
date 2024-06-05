@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main (void){
-    int gu,ty,pa,z;
+    int z;
 
     puts("じゃんけんタイム");
     puts("グーなら0,チョキなら1,パーなら2を押してください。");
