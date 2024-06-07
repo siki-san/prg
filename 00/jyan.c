@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define ROCK 1     /*ROCKkを１と定義する*/
+#define SCISSORS 2  /*SCISSORSを2と定義する*/
+#define PAPER 3   /*PAPERを3と定義する*/
 
 int main (void){
-    int z;/*選ばれたグーかチョキかパーが入るところ*/
-    int y;/*コンピュータの手(相手のて)*/
+    int me;/*選ばれたグーかチョキかパーが入るところ*/
+    int you;/*コンピュータの手(相手のて)*/
 
     srand(time(NULL));  /*乱数の種を初期化*/
 
@@ -13,44 +16,43 @@ int main (void){
     puts("グーなら1,チョキなら2,パーなら3を押してください。");
     puts("それでは始めます。");
     printf("さいしょはグーじゃんけんポン:");
-    scanf("%d",&z);   
+    scanf("%d",&me);   
 
-    if(z == 1){
+    you = rand()%3+1;  /*rand()と剰余で１～３の乱数を生成*/
+
+    if(me == ROCK){
         printf("あなたが出したのはグーです。");
-        y = rand()%3+1;
-        if(y == 1){
+        if(you == ROCK){
             printf("相手が出したのはグーです。");
             printf("あいこです。");
-        }else if(y == 2){
+        }else if(you == SCISSORS){
             printf("相手が出したのはチョキです。");
             printf("あなたの勝ちです。");
-        }else if(y ==3){
+        }else if(you ==PAPER){
             printf("相手が出したのはパーです。");
             printf("あなたの負けです。");
         }
-    }else if(z == 2){
+    }else if(me == SCISSORS){
         printf("あなたが出したのはチョキです。");
-        y = rand()%3+1;
-        if(y == 1){
+        if(you == ROCK){
             printf("相手が出したのはグーです。");
             printf("あなたの負けです");
-        }else if(y == 2){
+        }else if(you == SCISSORS){
             printf("相手が出したのはチョキです。");
             printf("あいこです。");
-        }else if(y ==3){
+        }else if(you ==PAPER){
             printf("相手が出したのはパーです。");
             printf("あなたの勝ちです。");
         }
-    }else if(z == 3){
+    }else if(me == PAPER){
         printf("あなたが出したのはパーです。");
-        y = rand()%3+1;
-        if(y == 1){
+        if(you == ROCK){
             printf("相手が出したのはグーです。");
             printf("あなたの勝ちです。");
-        }else if(y == 2){
+        }else if(you == SCISSORS){
             printf("相手が出したのはチョキです。");
             printf("あなたの負けです。");
-        }else if(y ==3){
+        }else if(you ==PAPER){
             printf("相手が出したのはパーです。");
             printf("あいこです。");
         }
