@@ -20,7 +20,7 @@ int main(void){
     }while(retry == 0);
 
 
-    printf("合計は%dで平均は%.2fです。\n",sum,(double)sum/cun);
+    printf("合計は%d,平均は%.2fです。\n",sum,(double)sum/cun);
 
 
     return 0;
